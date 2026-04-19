@@ -1,7 +1,7 @@
 """Parent-Child chunking strategy for hierarchical document retrieval."""
 
 import uuid
-from magic_chunker.core import BaseChunker, Chunk, ChunkType, ChunkingResult, Node
+from axiom_chunker.core import BaseChunker, Chunk, ChunkType, ChunkingResult, Node
 
 
 class ParentChildChunker(BaseChunker):

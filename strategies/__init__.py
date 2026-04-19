@@ -1,7 +1,7 @@
 """All chunking strategies."""
 
-from magic_chunker.strategies.file import HTMLChunker, MarkdownChunker, PDFChunker
-from magic_chunker.strategies.text import FixedSizeChunker, SemanticChunker, SentenceChunker, ParentChildChunker
+from axiom_chunker.strategies.file import HTMLChunker, MarkdownChunker, PDFChunker
+from axiom_chunker.strategies.text import FixedSizeChunker, SemanticChunker, SentenceChunker, ParentChildChunker
 
 __all__ = [
     # Text strategies

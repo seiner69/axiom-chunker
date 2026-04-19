@@ -1,7 +1,7 @@
 """Semantic text chunking strategy."""
 
 import re
-from magic_chunker.core import BaseChunker, Chunk, ChunkType, ChunkingResult, Node
+from axiom_chunker.core import BaseChunker, Chunk, ChunkType, ChunkingResult, Node
 
 
 # Paragraph boundaries: double newlines or specific separators

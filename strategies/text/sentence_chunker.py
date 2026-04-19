@@ -1,7 +1,7 @@
 """Sentence-based text chunking strategy."""
 
 import re
-from magic_chunker.core import BaseChunker, Chunk, ChunkType, ChunkingResult, Node
+from axiom_chunker.core import BaseChunker, Chunk, ChunkType, ChunkingResult, Node
 
 
 class SentenceChunker(BaseChunker):

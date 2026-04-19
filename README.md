@@ -27,8 +27,8 @@ pip install sentence-transformers  # 用于语义分块的嵌入参考
 ### 基础用法
 
 ```python
-from magic_chunker.core import Node, ChunkType
-from magic_chunker.strategies import SemanticChunker
+from axiom_chunker.core import Node, ChunkType
+from axiom_chunker.strategies import SemanticChunker
 
 # 1. 将文档转为 Node 列表
 nodes = [
@@ -49,8 +49,8 @@ for chunk in result.chunks:
 ### 与 MinerU 数据配合
 
 ```python
-from magic_chunker.loaders import MinerUContentListLoader
-from magic_chunker.strategies import SemanticChunker
+from axiom_chunker.loaders import MinerUContentListLoader
+from axiom_chunker.strategies import SemanticChunker
 
 # 1. 加载 MinerU 输出的 JSON
 loader = MinerUContentListLoader("annual_report.pdf_content_list.json")
@@ -68,7 +68,7 @@ result = chunker.chunk(nodes)
 ### Node 与 Chunk
 
 ```python
-from magic_chunker.core import Node, Chunk, ChunkingResult, ChunkType
+from axiom_chunker.core import Node, Chunk, ChunkingResult, ChunkType
 
 # Node — 文档解析后的最小单元
 node = Node(
@@ -92,7 +92,7 @@ chunk = Chunk(
 ### BaseChunker 接口
 
 ```python
-from magic_chunker.core import BaseChunker
+from axiom_chunker.core import BaseChunker
 
 class MyChunker(BaseChunker):
     def chunk(self, nodes: list[Node]) -> ChunkingResult:
@@ -186,7 +186,7 @@ chunker = HTMLChunker(
 加载 MinerU 的结构化 JSON 输出，适合年报、研报等格式规范的文档。
 
 ```python
-from magic_chunker.loaders import MinerUContentListLoader
+from axiom_chunker.loaders import MinerUContentListLoader
 
 loader = MinerUContentListLoader("path/to/content_list.json")
 nodes = loader.load()
@@ -206,7 +206,7 @@ print(full_path)  # → E:/project/output/images/xxx.jpg
 加载 MinerU 输出的 `.md` 文件，按 section 分组输出节点。
 
 ```python
-from magic_chunker.loaders import MinerUMarkdownLoader
+from axiom_chunker.loaders import MinerUMarkdownLoader
 
 loader = MinerUMarkdownLoader("path/to/report.pdf.md")
 nodes = loader.load()
@@ -215,8 +215,8 @@ nodes = loader.load()
 ### 图片嵌入
 
 ```python
-from magic_chunker.loaders import MinerUContentListLoader, embed_mineru_images
-from magic_embedder.strategies import CLIPImageEmbedder
+from axiom_chunker.loaders import MinerUContentListLoader, embed_mineru_images
+from axiom_embedder.strategies import CLIPImageEmbedder
 
 loader = MinerUContentListLoader("content_list.json")
 embedder = CLIPImageEmbedder(model_name="openai/clip-vit-base-patch32")

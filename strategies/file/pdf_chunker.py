@@ -1,6 +1,6 @@
 """PDF-specific chunking strategy."""
 
-from magic_chunker.core import BaseChunker, Chunk, ChunkType, ChunkingResult, Node
+from axiom_chunker.core import BaseChunker, Chunk, ChunkType, ChunkingResult, Node
 
 
 class PDFChunker(BaseChunker):

@@ -1,7 +1,7 @@
 """Markdown-specific chunking strategy."""
 
 import re
-from magic_chunker.core import BaseChunker, Chunk, ChunkType, ChunkingResult, Node
+from axiom_chunker.core import BaseChunker, Chunk, ChunkType, ChunkingResult, Node
 
 
 # Markdown structural patterns

@@ -4,9 +4,9 @@ Provides helpers to embed images extracted by MinerUContentListLoader
 using a image embedder (e.g., CLIPImageEmbedder).
 
 Example:
-    >>> from magic_chunker.loaders import MinerUContentListLoader
-    >>> from magic_chunker.loaders.image_utils import embed_mineru_images
-    >>> from magic_embedder.strategies import CLIPImageEmbedder
+    >>> from axiom_chunker.loaders import MinerUContentListLoader
+    >>> from axiom_chunker.loaders.image_utils import embed_mineru_images
+    >>> from axiom_embedder.strategies import CLIPImageEmbedder
     >>>
     >>> loader = MinerUContentListLoader("content_list.json")
     >>> embedder = CLIPImageEmbedder(model_name="ViT-B/16")
@@ -35,7 +35,7 @@ def embed_mineru_images(loader, image_embedder, skip_missing: bool = True):
         FileNotFoundError: If an image file is not found and skip_missing=False.
     """
     # Import at runtime to avoid circular dependency
-    from magic_vectorstore.core import VectorEntry
+    from axiom_vectorstore.core import VectorEntry
 
     image_paths_data = loader.get_image_paths()
     if not image_paths_data:

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Entry point for magic-chunker.
+"""Entry point for axiom-chunker.
 
 Usage:
     python -m magic_chunker.run --input <path> --strategy <strategy> [options]
@@ -10,8 +10,8 @@ import json
 import sys
 from pathlib import Path
 
-from magic_chunker.core import ChunkType, ChunkingResult, Node
-from magic_chunker.strategies import (
+from axiom_chunker.core import ChunkType, ChunkingResult, Node
+from axiom_chunker.strategies import (
     FixedSizeChunker,
     HTMLChunker,
     MarkdownChunker,
@@ -67,7 +67,7 @@ def save_output(result: ChunkingResult, path: Path) -> None:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="magic-chunker: Document chunking tool")
+    parser = argparse.ArgumentParser(description="axiom-chunker: Document chunking tool")
     parser.add_argument("--input", "-i", type=Path, required=True, help="Input JSON file")
     parser.add_argument("--output", "-o", type=Path, help="Output JSON file (default: stdout)")
     parser.add_argument(

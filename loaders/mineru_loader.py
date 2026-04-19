@@ -1,6 +1,6 @@
 """MinerU output loader.
 
-Loads and parses MinerU's output files into magic-chunker Node objects.
+Loads and parses MinerU's output files into axiom-chunker Node objects.
 
 Supports two output formats:
 - content_list.json: Structured JSON with type, bbox, page_idx, table_body
@@ -27,7 +27,7 @@ import re
 from pathlib import Path
 from typing import Any
 
-from magic_chunker.core import ChunkType, Node
+from axiom_chunker.core import ChunkType, Node
 
 
 # --- Shared helpers ---
